@@ -1,0 +1,13 @@
+{
+  "entries": [
+    {
+      "entry": "./lib/webparts/webApiClient/WebApiClientWebPart.js",
+      "manifest": "./src/webparts/webApiClient/WebApiClientWebPart.manifest.json",
+      "outputPath": "./dist/web-api-client-web-part.js"
+    }
+  ],
+  "externals": {},
+  "localizedResources": {
+    "WebApiClientWebPartStrings": "webparts/webApiClient/loc/{locale}.js"
+  }
+}

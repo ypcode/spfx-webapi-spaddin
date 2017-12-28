@@ -1,0 +1,11 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-webapi-client-client-side-solution",
+    "id": "254f6b28-ede6-4c00-bbcf-d1eaae47b3a7",
+    "version": "1.0.0.0"
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-webapi-client.sppkg"
+  }
+}
