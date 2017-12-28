@@ -1,26 +1,145 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Business Documents Web API";
 }
 
-<div class="jumbotron">
-    <h2>Welcome @ViewBag.UserName!</h2>
-    <p class="lead"><b>SharePoint Add-ins - </b>Embracing web standards, the new cloud add-in model gives you maximum choice and flexibility to build a new class of SharePoint Add-ins using familiar languages, tools, and hosting services.</p>
-    <p><a href="https://dev.office.com" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+<div class="row">
+    <div class="col-md-6">
+        <h2>Id</h2>
+        <input type="number" id="itemId" />
+    </div>
+    <div class="col-md-6">
+        <h2>Read</h2>
+        <button class="btn btn-default" onclick="getAllBusinessDocuments()">Get all</button>
+        <button class="btn btn-default" onclick="getBusinessDocumentById()">Get by Id</button>
+        <button class="btn btn-default" onclick="getMyBusinessDocuments()">Get Documents I'm in charge of</button>
+    </div>
+    <div class="col-md-6">
+        <h2>Write</h2>
+        <button class="btn btn-default" onclick="createBusinessDocument()">Create</button>
+        <button class="btn btn-default" onclick="updateBusinessDocumentById()">Update</button>
+    </div>
+    <div class="col-md-6">
+        <h2>Delete</h2>
+        <button class="btn btn-default" onclick="deleteBusinessDocumentById()">Delete</button>
+    </div>
 </div>
 <div class="row">
-    <div class="col-md-4">
-        <h2>Overview</h2>
-        <p>SharePoint introduces a Cloud Add-in Model that enables you to create add-ins. Learn what SharePoint Add-ins are, why you should build them, and the concepts that are fundamental to building them for SharePoint.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=294439">Learn more &raquo;</a></p>
+    <div class="col-md-6">
+        <h2>Input</h2>
+        <textarea id="input"></textarea>
     </div>
-    <div class="col-md-4">
-        <h2>Samples</h2>
-        <p>Download SharePoint Add-ins code samples. New samples are added frequently in JavaScript, C#, and VB.NET.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=294440">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Developer training</h2>
-        <p>Learn about SharePoint Add-ins with this interactive course offering developer-focused how to training and walkthrough videos.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=294441">Learn more &raquo;</a></p>
+    <div class="col-md-6">
+        <h2>Output</h2>
+        <textarea id="output"></textarea>
     </div>
 </div>
+
+@section scripts {
+    <script type="text/javascript">
+        function displayOutput(value) {
+            console.log(value);
+            $("#output").text(JSON.stringify(value, null, 2));
+        }
+
+        function handleError(error) {
+            alert(JSON.stringify(error));
+        }
+
+        function getAllBusinessDocuments() {
+            $.ajax({
+                method: "GET",
+                url: '/api/BusinessDocuments',
+                accepts: 'application/json'
+            }).done(function (result) {
+                displayOutput(result);
+            })
+                .fail(function (error) {
+                    handleError(error);
+                });
+        }
+
+        function getMyBusinessDocuments() {
+            $.ajax({
+                method: "GET",
+                url: '/api/MyBusinessDocuments',
+                accepts: 'application/json'
+            }).done(function (result) {
+                displayOutput(result);
+            })
+                .fail(function (error) {
+                    handleError(error);
+                });
+        }
+        
+        function getBusinessDocumentById() {
+            var itemId = $("#itemId").val();
+            itemId = parseInt(itemId);
+
+            $.ajax({
+                method: "GET",
+                url: '/api/BusinessDocuments/' + itemId,
+                accepts: 'application/json'
+            }).done(function (result) {
+                displayOutput(result);
+            })
+                .fail(function (error) {
+                    handleError(error);
+                });
+        }
+
+        function updateBusinessDocumentById() {
+            var itemId = $("#itemId").val();
+            var body = $("#input").val();
+
+            itemId = parseInt(itemId);
+
+            $.ajax({
+                method: "PUT",
+                url: '/api/BusinessDocuments/' + itemId,
+                accepts: 'application/json',
+                contentType: 'application/json',
+                data: body
+            }).done(function (result) {
+                displayOutput(result);
+            })
+                .fail(function (error) {
+                    handleError(error);
+                });
+        }
+
+        function createBusinessDocument() {
+            var body = $("#input").val();
+            console.log(body);
+
+            $.ajax({
+                method: "POST",
+                url: '/api/BusinessDocuments/',
+                accepts: 'application/json',
+                contentType: 'application/json',
+                data: body
+            }).done(function (result) {
+                displayOutput(result);
+            })
+                .fail(function (error) {
+                    handleError(error);
+                });
+        }
+
+        function deleteBusinessDocumentById() {
+            var itemId = $("#itemId").val();
+
+            itemId = parseInt(itemId);
+
+            $.ajax({
+                method: "DELETE",
+                url: '/api/BusinessDocuments/' + itemId,
+            }).done(function (result) {
+                displayOutput(result);
+            })
+                .fail(function (error) {
+                    handleError(error);
+                });
+        }
+    </script>
+}
+

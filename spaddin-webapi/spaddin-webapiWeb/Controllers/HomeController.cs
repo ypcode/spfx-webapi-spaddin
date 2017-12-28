@@ -13,10 +13,25 @@ namespace spaddin_webapiWeb.Controllers
         [SharePointContextFilter]
         public ActionResult Index()
         {
-            // Register the BusinessDocuments API
-            WebAPIHelper.RegisterWebAPIService(this.HttpContext, "/api/BusinessDocuments");
-
+            // Register the Web API when accessing the default page
+            Register();
+            
             return View();
+        }
+
+        [SharePointContextFilter]
+        public ActionResult Register()
+        {
+            try
+            {
+                // Register the BusinessDocuments API
+                WebAPIHelper.RegisterWebAPIService(this.HttpContext, "/api/BusinessDocuments");
+                return Json(new { message = "Web API registered" });
+            }
+            catch (Exception ex)
+            {
+                return Json(ex);
+            }
         }
     }
 }

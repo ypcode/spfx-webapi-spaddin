@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2017/05/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=2.19.1710.0, Culture=neutral, PublicKeyToken=null" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-3A95CEA3892E4ED6BAB81DF6ABC33CDD">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-3A95CEA3892E4ED6BAB81DF6ABC33CDD" Version="1" BaseSiteTemplate="GROUP#0" Scope="RootSite">
+  
+      <pnp:SiteFields>
+        <Field Type="User" DisplayName="InCharge" List="UserInfo" Required="FALSE" EnforceUniqueValues="FALSE" ShowField="ImnName" UserSelectionMode="PeopleAndGroups" UserSelectionScope="0" Group="BusinessDocs" ID="{957dfe52-75fe-414e-b16d-e4c61ba7bac6}" SourceID="{20713819-6310-42c6-93f1-7218effe6241}" StaticName="InCharge" Name="InCharge" />
+        <Field Type="Choice" DisplayName="DocumentPurpose" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="Dropdown" FillInChoice="FALSE" Group="BusinessDocs" ID="{eb8c91f8-2bb7-447f-8643-67602d7254f2}" SourceID="{20713819-6310-42c6-93f1-7218effe6241}" StaticName="DocumentPurpose" Name="DocumentPurpose">
+          <Default>Agreement project</Default>
+          <CHOICES>
+            <CHOICE>Agreement project</CHOICE>
+            <CHOICE>Offer project</CHOICE>
+            <CHOICE>Purchase project</CHOICE>
+            <CHOICE>Research document</CHOICE>
+          </CHOICES>
+        </Field>
+      </pnp:SiteFields>
+      <pnp:ContentTypes>
+        <pnp:ContentType ID="0x01010074335FCD93BE334FAF992199E70647FE" Name="Business Document" Description="" Group="BusinessDocs" NewFormUrl="" EditFormUrl="" DisplayFormUrl="">
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="c042a256-787d-4a6f-8a8a-cf6ab767f12d" Name="ContentType" />
+            <pnp:FieldRef ID="5f47e085-2150-41dc-b661-442f3027f552" Name="SelectFilename" />
+            <pnp:FieldRef ID="8553196d-ec8d-4564-9861-3dbe931050c8" Name="FileLeafRef" Required="true" />
+            <pnp:FieldRef ID="8c06beca-0777-48f7-91c7-6da68bc07b69" Name="Created" Hidden="true" />
+            <pnp:FieldRef ID="fa564e0f-0c70-4ab9-b863-0177e6ddd247" Name="Title" />
+            <pnp:FieldRef ID="28cf69c5-fa48-462a-b5cd-27b6f9d2bd5f" Name="Modified" Hidden="true" />
+            <pnp:FieldRef ID="822c78e3-1ea9-4943-b449-57863ad33ca9" Name="Modified_x0020_By" />
+            <pnp:FieldRef ID="4dd7e525-8d6b-4cb4-9d3e-44ee25f973eb" Name="Created_x0020_By" />
+            <pnp:FieldRef ID="eb8c91f8-2bb7-447f-8643-67602d7254f2" Name="DocumentPurpose" />
+            <pnp:FieldRef ID="957dfe52-75fe-414e-b16d-e4c61ba7bac6" Name="InCharge" />
+          </pnp:FieldRefs>
+        </pnp:ContentType>
+      </pnp:ContentTypes>
+      <pnp:Lists>
+  
+        <pnp:ListInstance Title="Business Documents" Description="" DocumentTemplate="{site}/BusinessDocs/Forms/template.dotx" OnQuickLaunch="true" TemplateType="101" Url="BusinessDocs" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="500" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-e717-4e80-aa17-d0c71b360101" ContentTypesEnabled="true" EnableAttachments="false" DefaultDisplayFormUrl="{site}/BusinessDocs/Forms/DispForm.aspx" DefaultEditFormUrl="{site}/BusinessDocs/Forms/EditForm.aspx" DefaultNewFormUrl="{site}/BusinessDocs/Forms/Upload.aspx" ImageUrl="/_layouts/15/images/itdl.png?rev=44" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01010074335FCD93BE334FAF992199E70647FE" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{E1370DA6-6933-4A5C-9AF5-4E7DA00EB92E}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Documents" Url="/sites/DevModern/BusinessDocs/Forms/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/dlicon.png?rev=44">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="FileLeafRef" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="DocumentPurpose" />
+                <FieldRef Name="InCharge" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Editor" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field ID="{3a6b296c-3f50-445c-a13f-9c679ea9dda3}" Hidden="FALSE" ReadOnly="TRUE" Required="FALSE" Type="Text" Name="ComplianceAssetId" ShowInFileDlg="FALSE" DisplayName="ID de ressource de conformité" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="ComplianceAssetId" FromBaseType="TRUE" ColName="nvarchar7" />
+            <Field ID="{d307dff3-340f-44a2-9f4b-fbfe1ba07459}" Name="_CommentCount" DisplaceOnUpgrade="TRUE" ReadOnly="TRUE" ShowInFileDlg="FALSE" Type="Lookup" DisplayName="Nombre de commentaires" List="Docs" FieldRef="ID" ShowField="CommentCount" JoinColName="DoclibRowId" JoinRowOrdinal="0" JoinType="INNER" SchemaVersion="16.0.139.0" RecreateIfMissing="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="_CommentCount" FromBaseType="TRUE" />
+            <Field ID="{db8d9d6d-dc9a-4fbd-85f3-4a753bfdc58c}" Name="_LikeCount" DisplaceOnUpgrade="TRUE" ReadOnly="TRUE" ShowInFileDlg="FALSE" Type="Lookup" DisplayName="Nombre de mentions J’aime" List="Docs" FieldRef="ID" ShowField="LikeCount" JoinColName="DoclibRowId" JoinRowOrdinal="0" JoinType="INNER" SchemaVersion="16.0.139.0" RecreateIfMissing="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="_LikeCount" FromBaseType="TRUE" />
+          </pnp:Fields>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="eb8c91f8-2bb7-447f-8643-67602d7254f2" Name="DocumentPurpose" Required="true" DisplayName="Purpose" />
+            <pnp:FieldRef ID="957dfe52-75fe-414e-b16d-e4c61ba7bac6" Name="InCharge" Required="true" DisplayName="In charge" />
+          </pnp:FieldRefs>
+        </pnp:ListInstance>
+
+      </pnp:Lists>
+
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>

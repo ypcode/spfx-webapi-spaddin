@@ -13,6 +13,6 @@ namespace spaddin_webapiWeb.Models
 
         public string Purpose { get; set; }
 
-
+        public string InCharge { get; set; }
     }
 }
