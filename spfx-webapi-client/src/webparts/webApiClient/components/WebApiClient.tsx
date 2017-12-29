@@ -50,7 +50,6 @@ export default class WebApiClient extends React.Component<IWebApiClientProps, IW
 		this.props.serviceScope.whenFinished(() => {
 			this.businessDocsService = this.props.serviceScope.consume(BusinessDocumentsServiceKey);
 			this.apiConfig = this.props.serviceScope.consume(ApiConfigServiceKey);
-			console.log('business service instance', this.businessDocsService);
 			this._loadDocuments();
 		});
 	}
@@ -178,7 +177,6 @@ export default class WebApiClient extends React.Component<IWebApiClientProps, IW
 	}
 
 	public addNewBusinessDocument() {
-		console.log('ADD NEW DOCUMENT');
 		this.setState({
 			isAdding: true,
 			selectedDocument: {
@@ -191,13 +189,10 @@ export default class WebApiClient extends React.Component<IWebApiClientProps, IW
 	}
 
 	public editCurrentBusinessDocument() {
-		console.log('EDIT DOCUMENT');
 		let { selectedDocument } = this.state;
 		if (!selectedDocument) {
 			return;
 		}
-
-		console.log('SELECTED DOCUMENT: ', selectedDocument);
 
 		this.setState({
 			isEditing: true
