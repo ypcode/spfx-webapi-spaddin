@@ -35,9 +35,3 @@ When the Iframe is loaded, a flag 'authenticated' is set.
 
 The API calls can be done only after this flag is set, the technique consists in implementing an asynchronous loop
 to poll this flag value before actually performing the API call
-
-
-
-https://ypcode.sharepoint.com/sites/devmodern/_layouts/15/AppRedirect.aspx?instance_id=#SPVisited=1
-
-{b7911ea0-6848-46fa-ae43-bf516d3de331}
