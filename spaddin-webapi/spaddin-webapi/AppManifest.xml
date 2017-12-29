@@ -8,7 +8,7 @@
 >
   <Properties>
     <Title>spaddin-webapi</Title>
-    <StartPage>~remoteAppUrl/?{StandardTokens}</StartPage>
+    <StartPage>~remoteAppUrl/Home/Register?{StandardTokens}</StartPage>
   </Properties>
 
   <AppPrincipal>

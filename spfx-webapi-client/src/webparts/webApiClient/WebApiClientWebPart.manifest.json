@@ -20,7 +20,7 @@
     "description": { "default": "This WebPart will consume a Web API that will interact with SharePoint" },
     "officeFabricIconFontName": "Page",
     "properties": {
-      "description": "WebApiClient"
+
     }
   }]
 }

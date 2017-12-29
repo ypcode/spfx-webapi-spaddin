@@ -7,9 +7,14 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace spaddin_webapiWeb.Controllers
 {
+    [EnableCors(origins: "https://ypcode.sharepoint.com,https://localhost:4321", 
+        headers: "*", 
+        methods: "*",
+        SupportsCredentials = true)]
     [WebAPIContextFilter]
     public class BusinessDocumentsController : ApiController
     {
@@ -24,36 +29,18 @@ namespace spaddin_webapiWeb.Controllers
             "Purchase project",
             "Research document"
         };
-
-        private static readonly Dictionary<int, string> _usersLoginCache = new Dictionary<int, string>();
-
-        private static string GetInChargeUserLoginName(ListItem businessDocListItem)
+        
+        private static BusinessDocumentViewModel ListItemToViewModel(ListItem businessDocListItem)
         {
             FieldUserValue inChargeUserValue = businessDocListItem[InChargeField] as FieldUserValue;
             string inChargeValue = inChargeUserValue != null ? inChargeUserValue.LookupValue : string.Empty;
 
-            if (!_usersLoginCache.ContainsKey(inChargeUserValue.LookupId))
-            {
-                ClientContext clientContext = businessDocListItem.Context as ClientContext;
-                if (clientContext != null)
-                {
-                    User user = clientContext.Web.EnsureUser(inChargeUserValue.LookupValue);
-                    clientContext.Load(user);
-                    clientContext.ExecuteQuery();
-                    _usersLoginCache.Add(inChargeUserValue.LookupId, user.LoginName);
-                }
-            }
-
-            return _usersLoginCache[inChargeUserValue.LookupId];
-        }
-        private static BusinessDocumentViewModel ListItemToViewModel(ListItem businessDocListItem)
-        {
             return new BusinessDocumentViewModel()
             {
                 Id = businessDocListItem.Id,
                 Name = (string)businessDocListItem[FileLeafRefField],
                 Purpose = (string)businessDocListItem[DocumentPurposeField],
-                InCharge = GetInChargeUserLoginName(businessDocListItem)
+                InCharge = inChargeValue
             };
         }
 
@@ -213,7 +200,7 @@ namespace spaddin_webapiWeb.Controllers
                 return Created($"/api/BusinessDocuments/{viewModel.Id}", viewModel);
             }
         }
-
+        
         // PUT: api/BusinessDocuments/5
         public IHttpActionResult Put(int id, [FromBody]BusinessDocumentViewModel value)
         {
