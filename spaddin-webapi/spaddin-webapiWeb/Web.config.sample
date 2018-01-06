@@ -5,7 +5,7 @@
   -->
 <configuration>
   <connectionStrings>
-    <add name="REDIS" connectionString="ypcode-lab.redis.cache.windows.net:6380,password=CceHSzGMG0Fclr4nIQgap3tL/3Rw51Dh78VJwUmSA/U=,ssl=True,abortConnect=False" />
+    <add name="REDIS" connectionString="yours.redis.cache.windows.net:6380,password=---YOURPASSWORD---,ssl=True,abortConnect=False" />
   </connectionStrings>
   <appSettings>
     <add key="webpages:Version" value="3.0.0.0" />

@@ -181,10 +181,11 @@ FakesAssemblies/
 
 # Prevent the commit of Scripts/dist files
 Scripts/dist
-/iKe.CGFP.MembersManager.SPAddinWeb/Properties/PublishProfiles
-/iKe.CGFP.MembersManager.SPAddinWeb/Scripts/dist
-/iKe.CGFP.MembersManager.SPAddinWeb/package-lock.json
+/spaddin-webapi/Properties/PublishProfiles
+/spaddin-webapi/Scripts/dist
+/spaddin-webapi/package-lock.json
 /package-lock.json
 /*.map
-/iKe.CGFP.MembersManager.SPAddinWeb/bundleconfig.json
-/iKe.CGFP.MembersManager.SPAddinWeb/Web.config
+/spaddin-webapi/bundleconfig.json
+/spaddin-webapi/Web.config
+/spaddin-webapi/Web.*.config

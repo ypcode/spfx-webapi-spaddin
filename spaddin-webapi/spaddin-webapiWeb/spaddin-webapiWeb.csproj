@@ -87,49 +87,49 @@
     </Reference>
     <Reference Include="Microsoft.IdentityModel.Extensions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=69c3241e6f0468ca, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Office.Client.Policy, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
-      <HintPath>..\spaddin-webapi\packages\Microsoft.SharePointOnline.CSOM.16.1.7115.1200\lib\net45\Microsoft.Office.Client.Policy.dll</HintPath>
+      <HintPath>..\spaddin-webapi\packages\Microsoft.SharePointOnline.CSOM.16.1.7206.1200\lib\net45\Microsoft.Office.Client.Policy.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Office.Client.TranslationServices, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
-      <HintPath>..\spaddin-webapi\packages\Microsoft.SharePointOnline.CSOM.16.1.7115.1200\lib\net45\Microsoft.Office.Client.TranslationServices.dll</HintPath>
+      <HintPath>..\spaddin-webapi\packages\Microsoft.SharePointOnline.CSOM.16.1.7206.1200\lib\net45\Microsoft.Office.Client.TranslationServices.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Office.SharePoint.Tools, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
-      <HintPath>..\spaddin-webapi\packages\Microsoft.SharePointOnline.CSOM.16.1.7115.1200\lib\net45\Microsoft.Office.SharePoint.Tools.dll</HintPath>
+      <HintPath>..\spaddin-webapi\packages\Microsoft.SharePointOnline.CSOM.16.1.7206.1200\lib\net45\Microsoft.Office.SharePoint.Tools.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Online.SharePoint.Client.Tenant, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
-      <HintPath>..\spaddin-webapi\packages\Microsoft.SharePointOnline.CSOM.16.1.7115.1200\lib\net45\Microsoft.Online.SharePoint.Client.Tenant.dll</HintPath>
+      <HintPath>..\spaddin-webapi\packages\Microsoft.SharePointOnline.CSOM.16.1.7206.1200\lib\net45\Microsoft.Online.SharePoint.Client.Tenant.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ProjectServer.Client, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
-      <HintPath>..\spaddin-webapi\packages\Microsoft.SharePointOnline.CSOM.16.1.7115.1200\lib\net45\Microsoft.ProjectServer.Client.dll</HintPath>
+      <HintPath>..\spaddin-webapi\packages\Microsoft.SharePointOnline.CSOM.16.1.7206.1200\lib\net45\Microsoft.ProjectServer.Client.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SharePoint.Client, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
-      <HintPath>..\spaddin-webapi\packages\Microsoft.SharePointOnline.CSOM.16.1.7115.1200\lib\net45\Microsoft.SharePoint.Client.dll</HintPath>
+      <HintPath>..\spaddin-webapi\packages\Microsoft.SharePointOnline.CSOM.16.1.7206.1200\lib\net45\Microsoft.SharePoint.Client.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SharePoint.Client.DocumentManagement, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
-      <HintPath>..\spaddin-webapi\packages\Microsoft.SharePointOnline.CSOM.16.1.7115.1200\lib\net45\Microsoft.SharePoint.Client.DocumentManagement.dll</HintPath>
+      <HintPath>..\spaddin-webapi\packages\Microsoft.SharePointOnline.CSOM.16.1.7206.1200\lib\net45\Microsoft.SharePoint.Client.DocumentManagement.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SharePoint.Client.Publishing, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
-      <HintPath>..\spaddin-webapi\packages\Microsoft.SharePointOnline.CSOM.16.1.7115.1200\lib\net45\Microsoft.SharePoint.Client.Publishing.dll</HintPath>
+      <HintPath>..\spaddin-webapi\packages\Microsoft.SharePointOnline.CSOM.16.1.7206.1200\lib\net45\Microsoft.SharePoint.Client.Publishing.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SharePoint.Client.Runtime, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
-      <HintPath>..\spaddin-webapi\packages\Microsoft.SharePointOnline.CSOM.16.1.7115.1200\lib\net45\Microsoft.SharePoint.Client.Runtime.dll</HintPath>
+      <HintPath>..\spaddin-webapi\packages\Microsoft.SharePointOnline.CSOM.16.1.7206.1200\lib\net45\Microsoft.SharePoint.Client.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SharePoint.Client.Runtime.Windows, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
-      <HintPath>..\spaddin-webapi\packages\Microsoft.SharePointOnline.CSOM.16.1.7115.1200\lib\net45\Microsoft.SharePoint.Client.Runtime.Windows.dll</HintPath>
+      <HintPath>..\spaddin-webapi\packages\Microsoft.SharePointOnline.CSOM.16.1.7206.1200\lib\net45\Microsoft.SharePoint.Client.Runtime.Windows.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SharePoint.Client.Search, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
-      <HintPath>..\spaddin-webapi\packages\Microsoft.SharePointOnline.CSOM.16.1.7115.1200\lib\net45\Microsoft.SharePoint.Client.Search.dll</HintPath>
+      <HintPath>..\spaddin-webapi\packages\Microsoft.SharePointOnline.CSOM.16.1.7206.1200\lib\net45\Microsoft.SharePoint.Client.Search.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SharePoint.Client.Search.Applications, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
-      <HintPath>..\spaddin-webapi\packages\Microsoft.SharePointOnline.CSOM.16.1.7115.1200\lib\net45\Microsoft.SharePoint.Client.Search.Applications.dll</HintPath>
+      <HintPath>..\spaddin-webapi\packages\Microsoft.SharePointOnline.CSOM.16.1.7206.1200\lib\net45\Microsoft.SharePoint.Client.Search.Applications.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SharePoint.Client.Taxonomy, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
-      <HintPath>..\spaddin-webapi\packages\Microsoft.SharePointOnline.CSOM.16.1.7115.1200\lib\net45\Microsoft.SharePoint.Client.Taxonomy.dll</HintPath>
+      <HintPath>..\spaddin-webapi\packages\Microsoft.SharePointOnline.CSOM.16.1.7206.1200\lib\net45\Microsoft.SharePoint.Client.Taxonomy.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SharePoint.Client.UserProfiles, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
-      <HintPath>..\spaddin-webapi\packages\Microsoft.SharePointOnline.CSOM.16.1.7115.1200\lib\net45\Microsoft.SharePoint.Client.UserProfiles.dll</HintPath>
+      <HintPath>..\spaddin-webapi\packages\Microsoft.SharePointOnline.CSOM.16.1.7206.1200\lib\net45\Microsoft.SharePoint.Client.UserProfiles.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SharePoint.Client.WorkflowServices, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
-      <HintPath>..\spaddin-webapi\packages\Microsoft.SharePointOnline.CSOM.16.1.7115.1200\lib\net45\Microsoft.SharePoint.Client.WorkflowServices.dll</HintPath>
+      <HintPath>..\spaddin-webapi\packages\Microsoft.SharePointOnline.CSOM.16.1.7206.1200\lib\net45\Microsoft.SharePoint.Client.WorkflowServices.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.WindowsAzure.Storage, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\spaddin-webapi\packages\WindowsAzure.Storage.7.0.0\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
@@ -137,11 +137,14 @@
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\spaddin-webapi\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="OfficeDevPnP.Core, Version=2.21.1712.2, Culture=neutral, PublicKeyToken=5e633289e95c321a, processorArchitecture=MSIL">
-      <HintPath>..\spaddin-webapi\packages\SharePointPnPCoreOnline.2.21.1712.2\lib\net45\OfficeDevPnP.Core.dll</HintPath>
+    <Reference Include="OfficeDevPnP.Core, Version=2.22.1801.0, Culture=neutral, PublicKeyToken=5e633289e95c321a, processorArchitecture=MSIL">
+      <HintPath>..\spaddin-webapi\packages\SharePointPnPCoreOnline.2.22.1801.0\lib\net45\OfficeDevPnP.Core.dll</HintPath>
     </Reference>
     <Reference Include="SharePointPnP.IdentityModel.Extensions, Version=1.2.3.0, Culture=neutral, PublicKeyToken=5e633289e95c321a, processorArchitecture=MSIL">
       <HintPath>..\spaddin-webapi\packages\SharePointPnP.IdentityModel.Extensions.1.2.3\lib\net45\SharePointPnP.IdentityModel.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="StackExchange.Redis, Version=1.2.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\spaddin-webapi\packages\StackExchange.Redis.1.2.6\lib\net45\StackExchange.Redis.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -151,6 +154,7 @@
     <Reference Include="System.IdentityModel.Tokens.Jwt, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\spaddin-webapi\packages\System.IdentityModel.Tokens.Jwt.4.0.0\lib\net45\System.IdentityModel.Tokens.Jwt.dll</HintPath>
     </Reference>
+    <Reference Include="System.IO.Compression" />
     <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\spaddin-webapi\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
@@ -258,6 +262,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Cache\RedisCacheProvider.cs" />
     <Compile Include="Controllers\BusinessDocumentsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Filters\SharePointContextFilterAttribute.cs" />
@@ -320,7 +325,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <PropertyGroup>

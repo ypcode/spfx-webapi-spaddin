@@ -1,4 +1,6 @@
-﻿using System;
+﻿using OfficeDevPnP.Core.WebAPI;
+using spaddin_webapiWeb.Cache;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -19,6 +21,9 @@ namespace spaddin_webapiWeb
             GlobalConfiguration.Configure(WebApiConfig.Register);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            // Setup the Web API Cache Provider
+            WebAPIContextCache.Instance.CacheProvider = new RedisCacheProvider();
         }
     }
 }
